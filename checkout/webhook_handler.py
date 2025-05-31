@@ -45,11 +45,6 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
-                # Clean data in the shipping details
-        for field, value in shipping_details.address.items():
-            if value == "":
-                shipping_details.address[field] = None
-
         order_exists = False
         attempt = 1
         while attempt <= 5:
